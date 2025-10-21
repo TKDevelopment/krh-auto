@@ -5,6 +5,10 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod": "ng build --configuration production",
+    "critical:install": "npm install --no-save critical",
+    "critical:extract": "node scripts/extract-critical.js",
+    "postbuild": "npm run critical:extract || true",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

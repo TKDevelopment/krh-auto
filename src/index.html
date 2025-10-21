@@ -2,11 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>KRH Auto | RI, CT, MA
-  </title>
+  <title>KRH Auto | RI, CT, MA</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="assets/images/569124418_122106863661027656_1005620816965317317_M.jpg">
+  <!-- Critical header styles inlined to avoid flash before Tailwind CSS loads -->
+  <!-- Preload the styles (dev uses styles.css; production may use hashed filenames injected by the CLI) -->
+  <link rel="preload" href="./styles.css" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="./styles.css"></noscript>
+  <style>
+    /* Minimal critical styles for the header to prevent FOUC. These mirror the Tailwind utilities used. */
+    .app-header-critical-bg { background-color: #3a2c5f !important; }
+    .app-header-critical-text { color: #ffffff !important; }
+    .app-header-critical-top { height: 2.5rem; display: flex; align-items: center; font-weight: 600; font-size: 0.875rem; }
+    .app-header-critical-mid { height: 7rem; display: flex; align-items: center; }
+    .app-header-critical-flex { display: flex; }
+    .app-header-critical-justify-between { justify-content: space-between; }
+    .app-header-critical-items-center { align-items: center; }
+  </style>
 </head>
 <body>
   <app-root></app-root>

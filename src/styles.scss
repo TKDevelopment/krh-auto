@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Global critical header rules - present in the main bundle */
+.app-header-critical-bg { background-color: #3a2c5f; }
+.app-header-critical-text { color: #ffffff; }
+.app-header-critical-top { height: 2.5rem; display: flex; align-items: center; font-weight: 600; font-size: 0.875rem; }
+.app-header-critical-mid { height: 7rem; display: flex; align-items: center; }
+.app-header-critical-flex { display:flex; }
+.app-header-critical-justify-between { justify-content: space-between; }
+.app-header-critical-items-center { align-items: center; }
