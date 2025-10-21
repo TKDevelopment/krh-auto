@@ -1,6 +1,6 @@
 <section class="bg-[#3a2c5f]/90">
     <!-- Top info bar: show on all screens but hide some elements on mobile -->
-    <div class="h-10 text-white flex justify-center md:justify-between font-oswald md:px-12 max-w-[1800px] font-semibold text-sm">
+    <div class="h-10 text-white mx-auto flex justify-center md:justify-between font-oswald md:px-12 max-w-[1800px] font-semibold text-sm">
         <div class="flex items-center">
             <!-- Address: hide on small screens -->
             <img src="assets\svgs\location-svgrepo-com.svg" class="h-4 w-4 hidden lg:inline-block" alt="location">
@@ -51,8 +51,8 @@
                 <div routerLink="/contact" class="text-white font-semibold cursor-pointer rounded-xl hover:bg-[#54408c] px-6 py-4">CONTACT</div>                
             </div>
 
-            <div class="w-full md:w-auto hidden lg:flex justify-end md:justify-end py-4 md:py-0">
-                <button class="hidden md:inline-block bg-[#54408c] my-auto px-4 py-2 rounded-2xl hover:bg-[#3a2c5f] hover:ring hover:ring-white text-white">Request an Appointment</button>
+            <div class="w-full md:w-auto hidden lg:flex justify-end md:justify-end py-4 md:py-0 font-oswald text-xl">
+                <button (click)="openDialog()" class="hidden md:inline-block bg-[#54408c] my-auto px-4 py-2 rounded-2xl hover:bg-[#3a2c5f] hover:ring hover:ring-white text-white">Request an Appointment</button>
             </div>
         </div>
 

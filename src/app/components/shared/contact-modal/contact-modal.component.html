@@ -1,1 +1,36 @@
-<p>contact-modal works!</p>
+<section class="">
+    <!-- Modal header -->
+    <div class="flex items-center justify-between p-4 md:p-5 rounded-t-lg bg-[#3a2c5f] text-white">
+        <h4 class="text-xl font-semibold font-oswald">
+            Request Appointment Form
+        </h4>
+        <button type="button" class="end-2.5 text-white bg-transparent rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center transition-all duration-200 ease-in-out hover:bg-gray-600 hover:text-white" (click)="onNoClick()">
+            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+            </svg>
+            <span class="sr-only">Close modal</span>
+        </button>
+    </div>
+    <!-- Modal body -->
+    <div class="p-6 bg-gradient-to-b from-gray-200 to-gray-400 rounded-b-lg">
+        <form class="space-y-6" (ngSubmit)="submit()">
+            <div>
+                <label for="fullName" class="block mb-2 text-md font-medium text-black">Full Name</label>
+                <input type="text" name="fullName" id="fullName" class="border text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-3 shadow-md border-gray-500 placeholder-gray-500 text-white" placeholder="Enter Full Name" required />
+            </div>
+            <div>
+                <label for="email" class="block mb-2 text-md font-medium text-black">Your Email</label>
+                <input [(ngModel)]="email" name="email" type="email" id="email" class="border text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-3 shadow-md border-gray-500 placeholder-gray-500 text-white" placeholder="name@company.com" required />
+            </div>
+            <div>
+                <label for="phone" class="block mb-2 text-md font-medium text-black">Your Phone</label>
+                <input type="phone" name="phone" id="phone" class="border text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-3 shadow-md border-gray-500 placeholder-gray-500 text-white" placeholder="(123) 456-7890" required />
+            </div>
+            <div>
+                <label for="description" class="block mb-2 text-md font-medium text-black">Message</label>
+                <textarea name="description" id="description" class="resize-none border text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-3 shadow-md border-gray-500 placeholder-gray-500 text-white" placeholder="What are you looking to connect over?" style="height: 120px;" required></textarea>
+            </div>
+            <button type="submit" class="w-full text-white bg-[#3a2c5f] font-medium rounded-lg text-lg px-6 py-3 shadow-lg transition-all duration-300 ease-in-out">Submit Request</button>
+        </form>
+    </div>
+</section>

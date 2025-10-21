@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.custom-backdrop-class {
+    background-color: rgba(0, 0, 0, 0.65) !important;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    opacity: 1 !important;
+}
+
+.custom-dialog-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.no-padding-surface .mat-mdc-dialog-container,
+.no-padding-surface .mat-mdc-dialog-container .mdc-dialog__surface {
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    overflow: visible;
+}
+

@@ -1,0 +1,30 @@
+@keyframes gradient-border {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.animate-gradient-border {
+    background-size: 200% 200%;
+    animation: gradient-border 3s ease infinite;
+}
+
+/* Local backdrop inside the dialog component in case the overlay backdrop isn't styled or to add extra effect */
+.local-backdrop {
+    position: fixed;
+    inset: 0; /* top:0; right:0; bottom:0; left:0; */
+    background: rgba(0, 0, 0, 0.30);
+    z-index: 9990; /* below the dialog panel but above page content */
+}
+
+/* Ensure the modal wrapper sits above our local backdrop */
+section > .rounded-xl {
+    position: relative;
+    z-index: 10000;
+}
