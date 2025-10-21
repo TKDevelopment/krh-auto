@@ -1,6 +1,6 @@
 <section class="bg-[#3a2c5f]/90">
     <!-- Top info bar: show on all screens but hide some elements on mobile -->
-    <div class="h-10 text-white flex justify-center md:justify-between md:px-12 max-w-[1800px] font-semibold text-sm">
+    <div class="h-10 text-white flex justify-center md:justify-between font-oswald md:px-12 max-w-[1800px] font-semibold text-sm">
         <div class="flex items-center">
             <!-- Address: hide on small screens -->
             <img src="assets\svgs\location-svgrepo-com.svg" class="h-4 w-4 hidden lg:inline-block" alt="location">
@@ -9,15 +9,15 @@
             <p class="hidden xl:inline-block">M-F 8am - 5pm</p>
         </div>
 
-        <div class="flex items-center mr-8 xl:mr-0">
+        <a routerLink="/" class="cursor-pointer flex items-center hover:text-[#a987ff] mr-8 xl:mr-0 text-xs sm:text-base font-oswald">
             <img src="assets\svgs\phone-calling-svgrepo-com.svg" class="h-4 w-4 mr-1" alt="phone">
             <p class="font-semibold">CALL TODAY 401.371.1571</p>
-        </div>
+        </a>
 
-        <div class="flex items-center">
+        <a routerLink="/contact" class="cursor-pointer flex items-center hover:text-[#a987ff] text-xs sm:text-base font-oswald">
             <img src="assets\svgs\email-svgrepo-com (1).svg" class="h-4 w-4 mr-1" alt="email">
             <p class="font-semibold">CONTACT US TODAY!</p>
-        </div>
+        </a>
             <div class="hidden md:flex items-center space-x-4">
             <a href="https:/www.facebook.com/profile.php?id=61580829698793" class="text-white hover:text-gray-900 dark:hover:text-white">
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
@@ -45,7 +45,7 @@
             </div>
 
             <!-- Desktop nav -->
-            <div class="hidden md:flex items-center space-x-16">
+            <div class="hidden md:flex items-center space-x-16 md:text-lg font-oswald">
                 <div routerLink="/about" class="text-white font-semibold cursor-pointer rounded-xl hover:bg-[#54408c] px-6 py-4">ABOUT</div>
                 <div routerLink="/services" class="text-white font-semibold cursor-pointer rounded-xl hover:bg-[#54408c] px-6 py-4">SERVICES</div>
                 <div routerLink="/contact" class="text-white font-semibold cursor-pointer rounded-xl hover:bg-[#54408c] px-6 py-4">CONTACT</div>                
@@ -57,7 +57,7 @@
         </div>
 
         <!-- Mobile menu overlay -->
-        <div *ngIf="menuOpen" class="md:hidden">
+        <div *ngIf="menuOpen" class="md:hidden font-oswald">
             <div class="mobile-menu bg-[#3a2c5f] text-white px-4 pb-4">
                 <a routerLink="/about" (click)="toggleMenu()" class="block py-2 font-semibold">ABOUT</a>
                 <a routerLink="/services" (click)="toggleMenu()" class="block py-2 font-semibold">SERVICES</a>
