@@ -13,22 +13,26 @@
     </div>
     <!-- Modal body -->
     <div class="p-6 bg-gradient-to-b from-gray-200 to-gray-400 rounded-b-lg">
-        <form class="space-y-6" (ngSubmit)="submit()">
+        <form class="grid grid-cols-2 gap-4" (ngSubmit)="submit()">
             <div>
-                <label for="fullName" class="block mb-2 text-md font-medium text-black">Full Name</label>
-                <input type="text" name="fullName" id="fullName" class="border text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-3 shadow-md border-gray-500 placeholder-gray-500 text-white" placeholder="Enter Full Name" required />
+                <label for="firstName" class="block mb-2 text-md font-medium text-black">First Name</label>
+                <input type="text" name="firstName" id="firstName" class="border text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-3 shadow-md border-gray-500 placeholder-gray-500 text-white" placeholder="Enter First Name" required />
             </div>
             <div>
+                <label for="lastName" class="block mb-2 text-md font-medium text-black">Last Name</label>
+                <input type="text" name="lastName" id="lastName" class="border text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-3 shadow-md border-gray-500 placeholder-gray-500 text-white" placeholder="Enter Last Name" required />
+            </div>
+            <div class="col-span-2">
                 <label for="email" class="block mb-2 text-md font-medium text-black">Your Email</label>
-                <input [(ngModel)]="email" name="email" type="email" id="email" class="border text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-3 shadow-md border-gray-500 placeholder-gray-500 text-white" placeholder="name@company.com" required />
+                <input [(ngModel)]="email" name="email" type="email" id="email" class="border text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-3 shadow-md border-gray-500 placeholder-gray-500 text-white" placeholder="name@email.com" required />
             </div>
-            <div>
+            <div class="col-span-2">
                 <label for="phone" class="block mb-2 text-md font-medium text-black">Your Phone</label>
                 <input type="phone" name="phone" id="phone" class="border text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-3 shadow-md border-gray-500 placeholder-gray-500 text-white" placeholder="(123) 456-7890" required />
             </div>
-            <div>
+            <div class="col-span-2">
                 <label for="description" class="block mb-2 text-md font-medium text-black">Message</label>
-                <textarea name="description" id="description" class="resize-none border text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-3 shadow-md border-gray-500 placeholder-gray-500 text-white" placeholder="What are you looking to connect over?" style="height: 120px;" required></textarea>
+                <textarea name="description" id="description" class="resize-none border text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-3 shadow-md border-gray-500 placeholder-gray-500 text-white" placeholder="How can we help?" style="height: 120px;" required></textarea>
             </div>
             <button type="submit" class="w-full text-white bg-[#3a2c5f] font-medium rounded-lg text-lg px-6 py-3 shadow-lg transition-all duration-300 ease-in-out">Submit Request</button>
         </form>
