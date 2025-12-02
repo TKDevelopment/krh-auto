@@ -1,18 +1,20 @@
-/* Header component styles: keep minimal because Tailwind handles most layout.
-	 Add small utilities for the mobile menu and logo sizing when needed. */
-
 .mobile-menu {
-	animation: slideDown 180ms ease-in-out;
+  animation: slideDown 180ms ease-in-out;
 }
 
 @keyframes slideDown {
-	from { opacity: 0; transform: translateY(-6px); }
-	to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Ensure the logo scales cleanly on small screens */
+/* Keep this if you like, otherwise rely on Tailwind sizing */
 img[routerLink] {
-	max-width: 220px;
-	height: auto;
+  max-width: 220px;
+  height: auto;
 }
-

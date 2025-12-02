@@ -1,158 +1,155 @@
-<section class="min-h-screen bg-gradient-to-b from-gray-200 to-gray-400 py-12 px-4 sm:px-8 md:px-16 font-oswald">
-  <!-- Header -->
-  <div class="flex items-center justify-between p-4 md:p-5 rounded-t-lg bg-[#3a2c5f] text-white shadow-lg mb-10">
-    <h2 class="text-3xl font-semibold tracking-wide">Auto Body Services</h2>
-    <button
-      type="button"
-      class="end-2.5 text-white bg-transparent rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center transition-all duration-200 ease-in-out hover:bg-gray-600 hover:text-white"
-      routerLink="/contact"
+<section
+  class="min-h-screen bg-gradient-to-b from-gray-200 to-gray-400
+         py-4 md:py-8 2xl:py-16
+         font-oswald"
+>
+  <div
+    class="max-w-screen-2xl mx-auto
+           px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16"
+  >
+    <!-- Header -->
+    <div
+      class="flex flex-col md:flex-row items-start md:items-center justify-between
+            gap-4 md:gap-6
+            p-4 md:p-5 rounded-t-lg bg-[#3a2c5f] text-white shadow-lg mb-4 md:mb-6"
     >
-      <svg
-        class="w-4 h-4"
-        aria-hidden="true"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 14 14"
+      <h2 class="text-xl md:text-2xl 2xl:text-3xl font-semibold tracking-wide">
+        Auto Body Services
+      </h2>
+    </div>
+
+    <!-- Cards grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+      <!-- Card 1 -->
+      <div
+        routerLink="/auto-body"
+        class="cursor-pointer bg-white/90 backdrop-blur-md rounded-xl border border-gray-300 shadow-lg overflow-hidden
+               hover:scale-[1.02] hover:shadow-2xl transition-all duration-300"
       >
-        <path
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
-        />
-      </svg>
-      <span class="sr-only">Close</span>
-    </button>
-  </div>
+        <div class="bg-[#3a2c5f] text-white p-4 text-center">
+          <h3 class="text-lg md:text-xl font-semibold uppercase">Restoration Services</h3>
+        </div>
 
-  <!-- Body -->
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-    <!-- Card 1 -->
-    <div
-      routerLink="/auto-body"
-      class="cursor-pointer bg-white/90 backdrop-blur-md rounded-xl border border-gray-300 shadow-lg overflow-hidden hover:scale-105 hover:shadow-2xl transition-all duration-300"
-    >
-      <div class="bg-[#3a2c5f] text-white p-4 text-center">
-        <h3 class="text-xl font-semibold uppercase">Restoration Services</h3>
+        <div class="w-full h-52 sm:h-60 md:h-64 lg:h-72 xl:h-80 overflow-hidden">
+          <img
+            src="assets/images/Auto-Body-Repair-1.jpg"
+            alt="Restoration Services"
+            class="w-full h-full object-cover object-center"
+          />
+        </div>
+
+        <div class="p-5 md:p-6 text-black bg-gradient-to-b from-gray-200 to-gray-300 text-sm md:text-base">
+          <p class="leading-relaxed">
+            We specialize in restoring vehicles to factory condition after accidents or wear.
+            From dent removal and panel replacement to precision paint matching, we ensure your vehicle looks as good as new.
+            We offer any of the following restoration services:
+          </p>
+          <ul class="mt-2 mb-3 list-disc list-inside ml-2 md:ml-4">
+            <li>Custom Paint Work</li>
+            <li>Rust Removal & Repair</li>
+            <li>Dent Removal</li>
+          </ul>
+          <button
+            routerLink="/auto-body"
+            class="w-full text-white bg-[#3a2c5f] font-medium rounded-lg text-sm md:text-md px-6 py-2 mt-1
+                   shadow-md transition-all duration-300 ease-in-out hover:bg-gray-700"
+          >
+            Learn More
+          </button>
+        </div>
       </div>
 
-      <!-- Image Wrapper -->
-      <div class="w-full h-56 sm:h-64 md:h-72 lg:h-80 xl:h-96 overflow-hidden">
-        <img
-          src="assets/images/Auto-Body-Repair-1.jpg"
-          alt="Restoration Services"
-          class="w-full h-full object-cover object-center"
-        />
+      <!-- Card 2 -->
+      <div
+        routerLink="/auto-collision-repair"
+        class="cursor-pointer bg-white/90 backdrop-blur-md rounded-xl border border-gray-300 shadow-lg overflow-hidden
+               hover:scale-[1.02] hover:shadow-2xl transition-all duration-300"
+      >
+        <div class="bg-[#3a2c5f] text-white p-4 text-center">
+          <h3 class="text-lg md:text-xl font-semibold uppercase">Collision Repair</h3>
+        </div>
+
+        <div class="w-full h-52 sm:h-60 md:h-64 lg:h-72 xl:h-80 overflow-hidden">
+          <img
+            src="assets/images/geotab-hero-banner-blog-Collision-reconstruction-with-telematics-data@2x.jpg"
+            alt="Collision Repair"
+            class="w-full h-full object-cover object-center"
+          />
+        </div>
+
+        <div class="p-5 md:p-6 text-black bg-gradient-to-b from-gray-200 to-gray-300 text-sm md:text-base">
+          <p class="leading-relaxed">
+            Whether it’s minor damage or major frame work, our certified experts handle complete collision repair with advanced equipment, OEM parts, and manufacturer-approved techniques.
+            We also assist with the following services to make your repair process seamless:
+          </p>
+          <ul class="mt-2 mb-3 list-disc list-inside ml-2 md:ml-4">
+            <li>Insurance Claims</li>
+            <li>OEM Part Replacement</li>
+            <li>Towing Arrangements</li>
+          </ul>
+          <button
+            routerLink="/auto-collision-repair"
+            class="w-full text-white bg-[#3a2c5f] font-medium rounded-lg text-sm md:text-md px-6 py-2 mt-1
+                   shadow-md transition-all duration-300 ease-in-out hover:bg-gray-700"
+          >
+            View Services
+          </button>
+        </div>
       </div>
 
-      <div class="p-6 text-black bg-gradient-to-b from-gray-200 to-gray-300">
-        <p class="leading-relaxed">
-          We specialize in restoring vehicles to factory condition after accidents or wear. 
-          From dent removal and panel replacement to precision paint matching, we ensure your vehicle looks as good as new.
-          We offer any of the following restoration services:
-        </p>
-        <ul class="mt-1 mb-3 list-disc list-inside ml-4">
-          <li>Custom Paint Work</li>
-          <li>Rust Removal & Repair</li>
-          <li>Dent Removal</li>
-        </ul>
-        <button
-          routerLink="/auto-body"
-          class="w-full text-white bg-[#3a2c5f] font-medium rounded-lg text-md px-6 py-2 shadow-md transition-all duration-300 ease-in-out hover:bg-gray-700"
-        >
-          Learn More
-        </button>
-      </div>
-    </div>
+      <!-- Card 3 -->
+      <div
+        routerLink="/certifications"
+        class="cursor-pointer bg-white/90 backdrop-blur-md rounded-xl border border-gray-300 shadow-lg overflow-hidden
+               hover:scale-[1.02] hover:shadow-2xl transition-all duration-300"
+      >
+        <div class="bg-[#3a2c5f] text-white p-4 text-center">
+          <h3 class="text-lg md:text-xl font-semibold uppercase">Certifications</h3>
+        </div>
 
-    <!-- Card 2 -->
-    <div
-      routerLink="/auto-collision-repair"
-      class="cursor-pointer bg-white/90 backdrop-blur-md rounded-xl border border-gray-300 shadow-lg overflow-hidden hover:scale-105 hover:shadow-2xl transition-all duration-300"
-    >
-      <div class="bg-[#3a2c5f] text-white p-4 text-center">
-        <h3 class="text-xl font-semibold uppercase">Collision Repair</h3>
-      </div>
+        <div class="w-full h-52 sm:h-60 md:h-64 lg:h-72 xl:h-80 overflow-hidden">
+          <img
+            src="assets/images/ase-gold-class-repair.webp"
+            alt="Certifications"
+            class="w-full h-full object-cover object-center"
+          />
+        </div>
 
-      <!-- Image Wrapper -->
-      <div class="w-full h-56 sm:h-64 md:h-72 lg:h-80 xl:h-96 overflow-hidden">
-        <img
-          src="assets/images/geotab-hero-banner-blog-Collision-reconstruction-with-telematics-data@2x.jpg"
-          alt="Collision Repair"
-          class="w-full h-full object-cover object-center"
-        />
-      </div>
+        <div class="p-5 md:p-6 text-black bg-gradient-to-b from-gray-200 to-gray-300 text-sm md:text-base">
+          <p class="leading-relaxed">
+            I-CAR Gold Class Certified and ASE Accredited, guaranteeing industry-standard quality and safety in every repair.
+            Trust your vehicle with certified professionals who care.
+            We retain and maintain the following certifications:
+          </p>
+          <ul class="mt-2 mb-3 list-disc list-inside ml-2 md:ml-4">
+            <li>I-CAR Gold Class Certification</li>
+            <li>ASE Collision Repair Accreditation</li>
+            <li>OEM Manufacturer-Approved Training</li>
+          </ul>
 
-      <div class="p-6 text-black bg-gradient-to-b from-gray-200 to-gray-300">
-        <p class="leading-relaxed">
-          Whether it’s minor damage or major frame work, our certified experts handle complete collision repair with advanced equipment, OEM parts, and manufacturer-approved techniques.
-          We also assist with the following services to make your repair process seamless:
-        </p>
-        <ul class="mt-1 mb-3 list-disc list-inside ml-4">
-          <li>Insurance Claims</li>
-          <li>OEM Part Replacement</li>
-          <li>Towing Arrangements</li>
-        </ul>
-        <button
-          routerLink="/auto-collision-repair"
-          class="w-full text-white bg-[#3a2c5f] font-medium rounded-lg text-md px-6 py-2 shadow-md transition-all duration-300 ease-in-out hover:bg-gray-700"
-        >
-          View Services
-        </button>
-      </div>
-    </div>
-
-    <!-- Card 3 -->
-    <div
-      routerLink="/certifications"
-      class="cursor-pointer bg-white/90 backdrop-blur-md rounded-xl border border-gray-300 shadow-lg overflow-hidden hover:scale-105 hover:shadow-2xl transition-all duration-300"
-    >
-      <div class="bg-[#3a2c5f] text-white p-4 text-center">
-        <h3 class="text-xl font-semibold uppercase">Certifications</h3>
-      </div>
-
-      <!-- Image Wrapper -->
-      <div class="w-full h-56 sm:h-64 md:h-72 lg:h-80 xl:h-96 overflow-hidden">
-        <img
-          src="assets/images/ase-gold-class-repair.webp"
-          alt="Certifications"
-          class="w-full h-full object-cover object-center"
-        />
-      </div>
-
-      <div class="p-6 text-black bg-gradient-to-b from-gray-200 to-gray-300">
-        <p class="leading-relaxed">
-          I-CAR Gold Class Certified and ASE Accredited, guaranteeing industry-standard quality and safety in every repair. 
-          Trust your vehicle with certified professionals who care.
-          We retain and maintain the following certifications:
-        </p>
-        <ul class="mt-1 mb-3 list-disc list-inside ml-4">
-          <li>I-CAR Gold Class Certification</li>
-          <li>ASE Collision Repair Accreditation</li>
-          <li>OEM Manufacturer-Approved Training</li>
-        </ul>
-
-        <button
-          routerLink="/certifications"
-          class="w-full text-white bg-[#3a2c5f] font-medium rounded-lg text-md px-6 py-2 shadow-md transition-all duration-300 ease-in-out hover:bg-gray-700"
-        >
-          View Certifications
-        </button>
+          <button
+            routerLink="/certifications"
+            class="w-full text-white bg-[#3a2c5f] font-medium rounded-lg text-sm md:text-md px-6 py-2 mt-1
+                   shadow-md transition-all duration-300 ease-in-out hover:bg-gray-700"
+          >
+            View Certifications
+          </button>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Call to Action -->
-  <div class="mt-12 text-center">
-    <p class="text-lg text-gray-800 font-medium mb-4">
-      Need a quote or want to schedule an appointment?
-    </p>
-    <a
-      routerLink="/contact"
-      class="inline-block bg-[#3a2c5f] text-white px-8 py-3 rounded-lg shadow-md text-lg transition-all duration-300 hover:bg-gray-700"
-    >
-      Request an Appointment
-    </a>
+    <!-- Call to Action -->
+    <div class="mt-10 md:mt-12 mb-4 text-center">
+      <p class="text-base md:text-lg text-gray-800 font-medium mb-3 md:mb-4">
+        Need a quote or want to schedule an appointment?
+      </p>
+      <a
+        routerLink="/contact"
+        class="inline-block bg-[#3a2c5f] text-white px-6 md:px-8 py-2.5 md:py-3 rounded-lg shadow-md
+               text-sm md:text-lg transition-all duration-300 hover:bg-gray-700"
+      >
+        Request an Appointment
+      </a>
+    </div>
   </div>
 </section>
