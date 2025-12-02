@@ -7,8 +7,8 @@
     "build": "ng build",
     "build:prod": "ng build --configuration production",
     "critical:install": "npm install --no-save critical",
-    "critical:extract": "node scripts/extract-critical.js",
-    "postbuild": "npm run critical:extract || true",
+    "critical:extract": "echo \"critical:extract disabled\"",
+    "postbuild": "",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -47,6 +47,6 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.3.5",
-    "typescript": "^4.9.5"
+    "typescript": "5.8.3"
   }
 }
