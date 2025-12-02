@@ -4,8 +4,8 @@
 
 [dev]
   command = "npm start"
-  port = 4562
-  targetPort = 4562
+  port = 4200
+  targetPort = 4200
 
 [functions]
   directory = "netlify/functions"
