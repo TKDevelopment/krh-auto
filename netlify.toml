@@ -1,11 +1,11 @@
 [build]
   command = "npm run build"
-  publish = "dist/krh-auto"
+  publish = "dist/krh-auto/browser"
 
 [dev]
   command = "npm start"
-  port = 4200
-  targetPort = 4200
+  port = 4562
+  targetPort = 4562
 
 [functions]
   directory = "netlify/functions"
