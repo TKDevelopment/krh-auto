@@ -3,9 +3,10 @@
   publish = "dist/krh-auto/browser"
 
 [dev]
-  command = "npm start"
-  port = 4200
+  command = "ng serve -c dev"
   targetPort = 4200
+  port = 8888
+  framework = "angular"
 
 [functions]
   directory = "netlify/functions"

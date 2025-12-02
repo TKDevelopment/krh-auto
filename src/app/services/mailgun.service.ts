@@ -14,7 +14,7 @@ export interface EmailPayload {
   providedIn: 'root'
 })
 export class MailgunService {
-  private endpoint = environment.mail.apiUrl; 
+  private endpoint = environment.mail.apiUrl;
 
   constructor(private http: HttpClient) {}
 
