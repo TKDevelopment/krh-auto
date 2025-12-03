@@ -2,13 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>KRH Auto | RI, CT, MA
-  </title>
+  <title>KRH Auto | RI, CT, MA</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="assets/images/569124418_122106863661027656_1005620816965317317_M.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-  <app-root></app-root>
+  <app-root class="hidden"></app-root>
+  <div id="app-loader" style="
+      position: fixed;
+      inset: 0;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: sans-serif;
+      color: #666;">
+  </div>
+
+  <script>
+    // Wait for stylesheets to finish loading before showing the app
+    window.addEventListener('load', () => {
+      const root = document.querySelector('app-root');
+      const loader = document.getElementById('app-loader');
+      if (root && loader) {
+        root.classList.remove('hidden');
+        loader.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>

@@ -1,0 +1,94 @@
+<div *ngIf="visible" class="fixed bottom-5 right-5 z-50">
+  <!-- Fade wrapper: controls opacity for BOTH purple + white boxes -->
+  <div
+    class="relative w-full max-w-xs transition-opacity duration-500"
+    [class.opacity-0]="!fadedIn"
+    [class.opacity-100]="fadedIn"
+  >
+    <!-- Purple shadow box behind -->
+    <div
+      class="pointer-events-none absolute -inset-0.5 translate-x-1 translate-y-1 rounded-2xl bg-[#8b5cff]"
+    ></div>
+
+    <!-- Toast box -->
+    <div
+      id="toast"
+      class="relative flex items-center w-full px-4 py-3 rounded-xl shadow-md bg-gray-50 overflow-hidden"
+      [ngClass]="{
+        'text-[#3a2c5f]': type === 'success',
+        'text-red-500': type === 'error'
+      }"
+      role="alert"
+    >
+      <!-- Icon container -->
+      <div
+        class="inline-flex items-center justify-center shrink-0 w-8 h-8 rounded-md z-10"
+        [ngClass]="{
+          'bg-[#8b5cff]/10 text-[#3a2c5f]': type === 'success',
+          'bg-red-100 text-red-600': type === 'error'
+        }"
+      >
+        <ng-container [ngSwitch]="type">
+          <svg
+            *ngSwitchCase="'success'"
+            class="w-4 h-4"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 13l4 4L19 7"
+            />
+          </svg>
+          <svg
+            *ngSwitchCase="'error'"
+            class="w-4 h-4"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </ng-container>
+      </div>
+
+      <!-- Message -->
+      <div class="ms-3 text-sm font-medium leading-tight z-10">
+        {{ message }}
+      </div>
+
+      <!-- Close button -->
+      <button
+        type="button"
+        class="ms-auto flex items-center justify-center h-8 w-8 text-gray-400 hover:text-gray-900 rounded-full z-10"
+        (click)="hide()"
+        aria-label="Close"
+      >
+        <svg
+          class="w-3.5 h-3.5"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 14 14"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M1 1l6 6m0 0l6 6M7 7l6-6M7 7l-6 6"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>

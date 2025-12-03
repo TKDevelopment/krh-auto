@@ -2,7 +2,6 @@ import { Routes } from '@angular/router';
 import { PublicLayoutComponent } from './layouts/public-layout/public-layout.component';
 import { LandingComponent } from './components/public/landing/landing.component';
 import { AboutComponent } from './components/public/about/about.component';
-import { AutoServicesComponent } from './components/public/auto-services/auto-services.component';
 import { ContactComponent } from './components/public/contact/contact.component';
 import { ServicesComponent } from './components/public/services/services.component';
 import { AutoBodyComponent } from './components/public/auto-body/auto-body.component';
