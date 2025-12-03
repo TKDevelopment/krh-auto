@@ -7,7 +7,7 @@ import { ToastService, ToastType } from '../../../services/toast.service';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './toast.component.html',
-  styleUrl: './toast.component.css'
+  styleUrl: './toast.component.scss'
 })
 export class ToastComponent implements OnInit {
   message: string = '';
