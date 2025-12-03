@@ -80,14 +80,14 @@
   <!-- Main header -->
   <div class="bg-[#3a2c5f]">
     <div
-      class="max-w-screen-2xl mx-auto
+      class="max-w-screen-2xl mx-auto py-2
             px-3 sm:px-4 md:px-6 lg:px-8 xl:px-10
             flex flex-col md:flex-row items-center justify-between"
     >
       <div class="w-full md:w-auto flex items-center justify-between 2xl:py-2">
         <img
           routerLink="/"
-          class="max-h-8 sm:max-h-12 md:max-h-16 lg:max-h-20 hover:cursor-pointer"
+          class="max-h-16 lg:max-h-20 hover:cursor-pointer"
           src="assets/images/569124418_122106863661027656_1005620816965317317_M.jpg"
           alt="Logo"
         />
@@ -98,7 +98,16 @@
           (click)="toggleMenu()"
           aria-label="Toggle menu"
         >
-          <!-- icons same as you had -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-6 h-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="white"
+            stroke-width="2"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
         </button>
       </div>
 
@@ -151,10 +160,10 @@
 
     <!-- Mobile menu -->
     <div *ngIf="menuOpen" class="md:hidden font-oswald">
-      <div class="mobile-menu bg-[#3a2c5f] text-white px-4 pb-4">
-        <a routerLink="/about" (click)="toggleMenu()" class="block py-2 font-semibold">ABOUT</a>
-        <a routerLink="/services" (click)="toggleMenu()" class="block py-2 font-semibold">SERVICES</a>
-        <a routerLink="/contact" (click)="toggleMenu()" class="block py-2 font-semibold">CONTACT</a>
+      <div class="mobile-menu bg-[#3a2c5f] text-white text-sm space-y-3 px-4 pb-4">
+        <a routerLink="/about" (click)="toggleMenu()" class="block font-semibold">ABOUT</a>
+        <a routerLink="/services" (click)="toggleMenu()" class="block font-semibold">SERVICES</a>
+        <a routerLink="/contact" (click)="toggleMenu()" class="block font-semibold">CONTACT</a>
       </div>
     </div>
   </div>
