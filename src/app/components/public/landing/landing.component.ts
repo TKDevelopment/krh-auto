@@ -44,16 +44,6 @@ export class LandingComponent implements OnInit, OnDestroy {
       image: 'assets/images/Auto-Body-Repair-1.jpg',
     },
     {
-      kicker: 'Towing & Emergency Support',
-      title: 'Towing Services When You Need Them Most',
-      subtitle:
-        'Had a bad day on the road? We can help arrange towing and get your vehicle safely to our shop for evaluation.',
-      ctaLabel: 'Arrange Towing & Repair',
-      ctaRoute: '/contact',
-      align: 'left',
-      image: 'assets/images/cheapest-way-to-tow-a-car-from-state-to-state-1024x682.jpg',
-    },
-    {
       kicker: 'Insurance Claims Assistance',
       title: 'We Speak Insurance So You Don’t Have To',
       subtitle:
@@ -63,6 +53,17 @@ export class LandingComponent implements OnInit, OnDestroy {
       align: 'right',
       image: 'assets/images/Insurance-Adjuster.jpg',
     },
+    {
+      kicker: 'Towing & Emergency Support',
+      title: 'Towing Services When You Need Them Most',
+      subtitle:
+        'Had a bad day on the road? We can help arrange towing and get your vehicle safely to our shop for evaluation.',
+      ctaLabel: 'Arrange Towing & Repair',
+      ctaRoute: '/contact',
+      align: 'left',
+      image: 'assets/images/cheapest-way-to-tow-a-car-from-state-to-state-1024x682.jpg',
+    },
+    
   ];
 
   constructor(private seo: SeoService) {}
