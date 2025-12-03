@@ -3,6 +3,9 @@ import { Context } from '@netlify/functions';
 const MAILGUN_API_KEY = process.env['mg_api_key']!;
 const MAILGUN_DOMAIN = process.env['mg_domain']!;
 
+console.log('MAILGUN_API_KEY present?', !!MAILGUN_API_KEY);
+console.log('MAILGUN_DOMAIN present?', !!MAILGUN_DOMAIN);
+
 export default async (request: Request, context: Context): Promise<Response> => {
   if (request.method !== 'POST') {
     return new Response('Method Not Allowed', { status: 405 });

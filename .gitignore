@@ -21,8 +21,9 @@ yarn-error.log
 *.sublime-workspace
 
 # environments
-/src/environments/environment.dev.ts
-/src/environments/environment.prod.ts
+\src\environments\environment.dev.ts
+\src\environments\environment.prod.ts
+.env
 
 # Visual Studio Code
 .vscode/*

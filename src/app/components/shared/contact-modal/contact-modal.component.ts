@@ -45,17 +45,17 @@ export class ContactModalComponent {
     this.error = null;
 
     const payload: EmailPayload = {
-      to: 'info@krhauto.com', // <- change to whatever inbox should receive these
+      to: 'knotttristan@gmail.com', // <- change to whatever inbox should receive these
       subject: `New appointment request from ${this.firstName} ${this.lastName}`,
       text: `
-New appointment request from KRH Auto Body website:
+        New appointment request from KRH Auto Body website:
 
-Name: ${this.firstName} ${this.lastName}
-Email: ${this.email}
-Phone: ${this.phone}
+        Name: ${this.firstName} ${this.lastName}
+        Email: ${this.email}
+        Phone: ${this.phone}
 
-Message:
-${this.message}
+        Message:
+        ${this.message}
       `.trim(),
       html: `
         <h2>New appointment request from KRH Auto Body website</h2>

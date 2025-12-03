@@ -160,11 +160,11 @@
               type="submit"
               [disabled]="form.invalid || submitting"
               class="inline-flex items-center justify-center gap-2 rounded-xl px-6 py-2.5 2xl:py-3
-                     text-sm md:text-base text-white font-medium shadow-lg
-                     bg-[#3a2c5f]
-                     enabled:hover:bg-[#2c2147]
-                     disabled:opacity-60 disabled:cursor-not-allowed
-                     focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
+                    text-sm md:text-base text-white font-medium shadow-lg
+                    bg-[#3a2c5f]
+                    enabled:hover:bg-[#2c2147]
+                    disabled:opacity-60 disabled:cursor-not-allowed
+                    focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
             >
               <svg
                 *ngIf="submitting"
@@ -182,14 +182,6 @@
               </svg>
               <span>{{ submitting ? 'Sending…' : 'Send Message' }}</span>
             </button>
-          </div>
-
-          <!-- Success -->
-          <div
-            *ngIf="submitted"
-            class="rounded-xl border border-emerald-200 bg-emerald-50 text-emerald-800 px-4 py-3 text-xs md:text-sm"
-          >
-            Thanks! Your message has been sent.
           </div>
         </form>
       </div>
