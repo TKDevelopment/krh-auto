@@ -1,9 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { firstValueFrom } from 'rxjs';
 import { MailgunService, EmailPayload } from '../../../services/mailgun.service'; // adjust path as needed
 import { ToastService } from '../../../services/toast.service';
+import { SeoService } from '../../../services/seo.service';
+import { CONTACT_SEO } from '../../../config/seo.config';
 
 @Component({
   selector: 'app-contact',
@@ -11,7 +13,7 @@ import { ToastService } from '../../../services/toast.service';
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
-export class ContactComponent {
+export class ContactComponent implements OnInit {
   form: FormGroup;
   submitting = false;
   submitted = false;
@@ -20,7 +22,8 @@ export class ContactComponent {
   constructor(
     private fb: FormBuilder,
     private mailgun: MailgunService,
-    private toast: ToastService
+    private toast: ToastService,
+    private seo: SeoService
   ) {
     this.form = this.fb.group({
       firstName: ['', [Validators.required, Validators.minLength(2)]],
@@ -35,6 +38,10 @@ export class ContactComponent {
       email: ['', [Validators.required, Validators.email]],
       message: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(2000)]],
     });
+  }
+
+  ngOnInit(): void {
+    this.seo.update(CONTACT_SEO);
   }
 
   // Getters

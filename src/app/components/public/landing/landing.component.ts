@@ -1,6 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { SeoService } from '../../../services/seo.service';
+import { HOME_SEO } from '../../../config/seo.config';
 
 interface HeroSlide {
   title: string;
@@ -61,14 +63,16 @@ export class LandingComponent implements OnInit, OnDestroy {
       align: 'right',
       image: 'assets/images/Insurance-Adjuster.jpg',
     },
-  
   ];
+
+  constructor(private seo: SeoService) {}
 
   currentSlide = 0;
   private autoSlideTimer: any;
 
   ngOnInit(): void {
     this.startAutoSlide();
+    this.seo.update(HOME_SEO);
   }
 
   ngOnDestroy(): void {
