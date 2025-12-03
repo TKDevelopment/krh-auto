@@ -19,12 +19,13 @@
     </div>
 
     <!-- Cards grid -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-stretch">
       <!-- Card 1 -->
       <div
-        routerLink="/auto-body"
+        routerLink="/contact"
         class="cursor-pointer bg-white/90 backdrop-blur-md rounded-xl border border-gray-300 shadow-lg overflow-hidden
-               hover:scale-[1.02] hover:shadow-2xl transition-all duration-300"
+               hover:scale-[1.02] hover:shadow-2xl transition-all duration-300
+               flex flex-col h-full"
       >
         <div class="bg-[#3a2c5f] text-white p-4 text-center">
           <h3 class="text-lg md:text-xl font-semibold uppercase">Restoration Services</h3>
@@ -38,7 +39,7 @@
           />
         </div>
 
-        <div class="p-5 md:p-6 text-black bg-gradient-to-b from-gray-200 to-gray-300 text-sm md:text-base">
+        <div class="flex-1 p-5 md:p-6 text-black bg-gradient-to-b from-gray-200 to-gray-300 text-sm md:text-base">
           <p class="leading-relaxed">
             We specialize in restoring vehicles to factory condition after accidents or wear.
             From dent removal and panel replacement to precision paint matching, we ensure your vehicle looks as good as new.
@@ -49,21 +50,15 @@
             <li>Rust Removal & Repair</li>
             <li>Dent Removal</li>
           </ul>
-          <button
-            routerLink="/auto-body"
-            class="w-full text-white bg-[#3a2c5f] font-medium rounded-lg text-sm md:text-md px-6 py-2 mt-1
-                   shadow-md transition-all duration-300 ease-in-out hover:bg-gray-700"
-          >
-            Learn More
-          </button>
         </div>
       </div>
 
       <!-- Card 2 -->
       <div
-        routerLink="/auto-collision-repair"
+        routerLink="/contact"
         class="cursor-pointer bg-white/90 backdrop-blur-md rounded-xl border border-gray-300 shadow-lg overflow-hidden
-               hover:scale-[1.02] hover:shadow-2xl transition-all duration-300"
+               hover:scale-[1.02] hover:shadow-2xl transition-all duration-300
+               flex flex-col h-full"
       >
         <div class="bg-[#3a2c5f] text-white p-4 text-center">
           <h3 class="text-lg md:text-xl font-semibold uppercase">Collision Repair</h3>
@@ -77,7 +72,7 @@
           />
         </div>
 
-        <div class="p-5 md:p-6 text-black bg-gradient-to-b from-gray-200 to-gray-300 text-sm md:text-base">
+        <div class="flex-1 p-5 md:p-6 text-black bg-gradient-to-b from-gray-200 to-gray-300 text-sm md:text-base">
           <p class="leading-relaxed">
             Whether it’s minor damage or major frame work, our certified experts handle complete collision repair with advanced equipment, OEM parts, and manufacturer-approved techniques.
             We also assist with the following services to make your repair process seamless:
@@ -87,53 +82,42 @@
             <li>OEM Part Replacement</li>
             <li>Towing Arrangements</li>
           </ul>
-          <button
-            routerLink="/auto-collision-repair"
-            class="w-full text-white bg-[#3a2c5f] font-medium rounded-lg text-sm md:text-md px-6 py-2 mt-1
-                   shadow-md transition-all duration-300 ease-in-out hover:bg-gray-700"
-          >
-            View Services
-          </button>
         </div>
       </div>
-
-      <!-- Card 3 -->
+      
+      <!-- Card 3 – Towing Services -->
       <div
-        routerLink="/certifications"
+        routerLink="/contact"
         class="cursor-pointer bg-white/90 backdrop-blur-md rounded-xl border border-gray-300 shadow-lg overflow-hidden
-               hover:scale-[1.02] hover:shadow-2xl transition-all duration-300"
+              hover:scale-[1.02] hover:shadow-2xl transition-all duration-300
+              flex flex-col h-full"
       >
+        <!-- Header -->
         <div class="bg-[#3a2c5f] text-white p-4 text-center">
-          <h3 class="text-lg md:text-xl font-semibold uppercase">Certifications</h3>
+          <h3 class="text-lg md:text-xl font-semibold uppercase">Towing Services</h3>
         </div>
 
+        <!-- Image -->
         <div class="w-full h-52 sm:h-60 md:h-64 lg:h-72 xl:h-80 overflow-hidden">
           <img
-            src="assets/images/ase-gold-class-repair.webp"
-            alt="Certifications"
+            src="assets/images/cheapest-way-to-tow-a-car-from-state-to-state-1024x682.jpg"
+            alt="Towing Services"
             class="w-full h-full object-cover object-center"
           />
         </div>
 
-        <div class="p-5 md:p-6 text-black bg-gradient-to-b from-gray-200 to-gray-300 text-sm md:text-base">
+        <!-- Text Content -->
+        <div class="flex-1 p-5 md:p-6 text-black bg-gradient-to-b from-gray-200 to-gray-300 text-sm md:text-base">
           <p class="leading-relaxed">
-            I-CAR Gold Class Certified and ASE Accredited, guaranteeing industry-standard quality and safety in every repair.
-            Trust your vehicle with certified professionals who care.
-            We retain and maintain the following certifications:
+            Need a tow after an accident or breakdown? KRH Auto Body can help arrange prompt and reliable towing to our facility.
+            Whether you're stuck at home, work, or roadside, we’ll coordinate everything so your vehicle gets safely transported.
           </p>
-          <ul class="mt-2 mb-3 list-disc list-inside ml-2 md:ml-4">
-            <li>I-CAR Gold Class Certification</li>
-            <li>ASE Collision Repair Accreditation</li>
-            <li>OEM Manufacturer-Approved Training</li>
-          </ul>
 
-          <button
-            routerLink="/certifications"
-            class="w-full text-white bg-[#3a2c5f] font-medium rounded-lg text-sm md:text-md px-6 py-2 mt-1
-                   shadow-md transition-all duration-300 ease-in-out hover:bg-gray-700"
-          >
-            View Certifications
-          </button>
+          <ul class="mt-3 mb-2 list-disc list-inside ml-2 md:ml-4">
+            <li>Fast towing arrangements when you need them most</li>
+            <li>Safe transport directly to our repair facility</li>
+            <li>Support available for collision and non-collision incidents</li>
+          </ul>
         </div>
       </div>
     </div>
